@@ -1,0 +1,9 @@
+<h1>Edit <%= song.title %></h1>
+
+<form method="POST" action="/songs/<%= song._id %>">
+  <input name="song[title]" value="<%= song.title %>" type="text" />
+  <input name="song[duration]" value="<%= song.duration %>" type="text" />
+  <button>Submit</button>
+</form>
+
+<button><a href="/songs/view">Go Back</a></button>

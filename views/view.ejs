@@ -1,0 +1,24 @@
+<h1>Library</h1>
+
+<% songs.forEach(song => { %>
+<p>
+  <strong> Title </strong> - <%= song.title %>
+  <br />
+  <strong> Duration </strong> - <%= song.duration %>
+</p>
+
+<button><a href="/songs/<%= song._id %>/edit">Edit</a></button>
+<form
+  method="POST"
+  action="/songs/<%= song._id %>?_method=DELETE"
+  style="display: inline"
+>
+  <button>Delete</button>
+</form>
+
+<br />
+<% }) %>
+
+<br />
+<br />
+<button><a href="/songs">Go Back</a></button>
